@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './styles.module.css'
 
 type DefaultInputProps = {
   id: string
@@ -9,7 +10,7 @@ export function DefaultInput({ id, type, labelText, ...rest }: DefaultInputProps
   return (
     <>
       <label htmlFor={id}>{labelText}</label>
-      <input type={type} id={id} {...rest} />
+      <input className={styles.input} type={type} id={id} {...rest} />
     </>
   )
 }

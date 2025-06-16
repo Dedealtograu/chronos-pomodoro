@@ -125,7 +125,7 @@ export function History() {
                     <tr key={task.id}>
                       <td>{task.name}</td>
                       <td>{task.duration}min</td>
-                      <td>{formatDate(task.startDate)}</td>
+                      <td>{formatDate(task.startDate.getTime())}</td>
                       <td>{getTaskStatus(task, state.activeTask)}</td>
                       <td>{taskTypeDictionary[task.type]}</td>
                     </tr>
